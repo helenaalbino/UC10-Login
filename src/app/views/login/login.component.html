@@ -1,0 +1,21 @@
+<section class="secao-login">
+    <h2>Acesso do cliente</h2>
+    <div class="container-login">
+        <div class="login">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+                <label for="email" class="form-label">E-mail</label><br>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail cadastrado" [(ngModel)]="loginModel.email"><br>
+
+                <label for="senha" class="form-label">Senha</label><br>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Sua senha" [(ngModel)]="loginModel.password"><br>
+
+                <button type="submit" class="btn btn-secondary">Entrar</button>
+
+            </form><br>
+            <p id="mensagem" *ngIf="mensagem != ''">{{mensagem}}</p>
+            <p><a href="">Esqueci minha senha</a></p>
+            <p>Não possui conta? <a href="">Cadastre-se agora</a></p>
+        </div>
+    </div>
+</section>
